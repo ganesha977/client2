@@ -1,0 +1,91 @@
+/* Global Reset and Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: Arial, sans-serif; /* Optional: Set a consistent font */
+}
+
+/* Container to center the content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+/* Flexbox for responsive grid layout */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Adjust the gap as needed */
+}
+
+/* Ensure items take appropriate width */
+.product-item {
+  flex: 1 1 calc(33.333% - 1rem); /* 3 items per row by default */
+  margin-bottom: 1rem; /* Space between rows */
+}
+
+/* Prevent layout shake by using flex and align items properly */
+.rpc-product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Image Gallery */
+.rpc-image-gallery {
+  position: relative;
+  padding-top: 100%; /* Maintain aspect ratio */
+  overflow: hidden;
+}
+
+.rpc-image-gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text alignment and centering */
+.text-center {
+  text-align: center;
+}
+
+.no-products {
+  text-align: center;
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .product-item {
+    flex: 1 1 calc(33.333% - 1rem); /* 3 items per row */
+  }
+}
+
+@media (max-width: 1023px) {
+  .product-item {
+    flex: 1 1 calc(50% - 1rem); /* 2 items per row */
+  }
+}
+
+@media (max-width: 767px) {
+  .product-item {
+    flex: 1 1 calc(100% - 1rem); /* 1 item per row */
+  }
+}
