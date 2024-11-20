@@ -4,6 +4,8 @@ import image1 from "../assets/amazonbanner7.jpg";
 import image2 from "../assets/amazonbanner1.jpg";
 import image3 from "../assets/amazonbanner3.jpg";
 import image4 from "../assets/amazonbanner4.jpg";
+import image5 from "../assets/amazonbanner5.jpg";
+import image6 from "../assets/amazonbanner6.jpg";
 
 
 
@@ -52,7 +54,7 @@ const PromotionalSlider = () => {
       id: 5,
       title: "Accessories Collection",
       description: "Complete your look with premium accessories",
-      imageUrl: "/api/placeholder/600/400",
+      imageUrl: image6,
       discount: "40% OFF",
       rating: 4.9,
       category: "Hot Deal"
@@ -61,7 +63,7 @@ const PromotionalSlider = () => {
       id: 6,
       title: "Footwear Range",
       description: "Step into comfort and style",
-      imageUrl: "/api/placeholder/600/400",
+      imageUrl: image5,
       discount: "35% OFF",
       rating: 4.8,
       category: "Limited Edition"
